@@ -10,22 +10,35 @@ for (let i = 0; i< 256; i++) {
 
 
 
-
+let z = 10
 function hover(element) {
     
     element.addEventListener("mouseover", (e) => {
-        e.target.style.backgroundColor = "pink"
+        
+        e.target.style.backgroundColor =  `rgb(${Math.random()*100},${Math.random()*100},${Math.random()*100})`
+
        
 
     })
 
-    element.addEventListener("mouseout", (e) => {
-        e.target.style.backgroundColor = "white"
-       
+    element.addEventListener("", (e) => {
+        e.target.style.backgroundColor = `rgb(${Math.random()*100},${Math.random()*100},${Math.random()*100})`
 
     })
 
+z = z- 10
+}
 
+
+
+
+function getRandomColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
 }
 
 let pete = document.querySelectorAll("div")
