@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.container > div {
+    border: 2px solid black;
+    width: 5.9%;
+    height: 20px;
+    background-color:  white;
+}
+
+body {
+    margin: 0;
+}
