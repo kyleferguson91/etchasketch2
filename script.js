@@ -36,9 +36,46 @@ pete.forEach((elem,ind,arr) =>
 
 const button = document.querySelector(".squares")
 
-function getSquares() {
-    let squares = prompt("how many squares would you like?", "enter a number")
-    
-}
 
 button.addEventListener("click", getSquares)
+
+function getSquares() {
+   let num =  prompt("how many squares");
+   if (parseInt(num) > 100) {
+    alert("smaller than 100")
+    getSquares()}
+
+   else if (num <= 100) {    
+
+    for (let child of Array.from(container.children)) {
+        container.removeChild(child)
+
+        
+    }
+    for (let i = 0; i< num*num; i++) {
+
+    
+        container.appendChild(document.createElement("div"))
+      container.children[i].style.width = `${100/num - .8}vw`
+      container.children[i].style.height = `${100/num - .8}vh`
+    }
+
+
+
+} 
+{
+
+
+       
+    
+    
+
+}
+
+
+
+}
+
+
+
+
